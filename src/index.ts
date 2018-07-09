@@ -41,10 +41,12 @@ export default class RpsShelljs {
 
 
   @rpsAction({verbName:'echo'})
-  async echo (ctx:RpsContext,opts:{}, content:string) : Promise<ShellString> {
+  async echo (ctx:RpsContext,opts:{}, item:any) : Promise<any> {
     let options = opts['options'];
-    if(options) return shell.echo(options,content);
-    else return shell.echo(content);
+    if(options) shell.echo(options,item);
+    else shell.echo(item);
+
+    return item;
   }
 
   // @rpsAction({verbName:'exec'})

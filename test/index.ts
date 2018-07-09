@@ -20,4 +20,11 @@ m.describe('ShellJS', () => {
     expect(result).to.be.deep.equals(expected);
   });
 
+  m.it('echo with output same as input', async function() {
+    let input = [1,2,3];
+    let output = await shelljs.echo($CONTEXT,{},input);
+
+    expect(output).to.be.deep.equals(input);
+  });
+
 })
