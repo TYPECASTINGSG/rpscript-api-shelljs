@@ -1,10 +1,10 @@
-/**
- * @module shelljs
- */
 import {RpsContext,RpsModule,rpsAction} from 'rpscript-interface';
 import shell, { ExecOutputReturnValue } from 'shelljs';
 import {ShellString,ShellArray} from 'shelljs';
 
+/** Welcome to ShellJS Module
+ * @namespace ShellJS
+*/
 @RpsModule("shelljs")
 export default class RpsShelljs {
 
